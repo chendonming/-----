@@ -8,3 +8,8 @@
 ```
 
 端口号注意使用实际的，clash 7890是经典的端口数
+
+# 在根节点块写入以下配置
+```json
+ "skipWebFetchPreflight": true,
+```
