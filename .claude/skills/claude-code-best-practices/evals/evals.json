@@ -1,0 +1,44 @@
+{
+  "skill_name": "claude-code-best-practices",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "在 Agent/ClaudeCode 下写一篇 blog，主题：Claude Code 官方建议怎么用 subagent？以官方文档为准，文末注明信息来源。",
+      "expected_output": "一篇符合知识库 house style 的中文 blog，基于官方文档，含官方原话引用与文末参考来源。",
+      "files": [],
+      "expectations": [
+        "输出文件创建在任务给定的输出目录（而非散落在对话里）",
+        "文中包含至少一处官方原文引用（> 引用块）",
+        "文末有参考来源小节，列出至少一个官方 URL 与获取方式",
+        "执行过程中使用了 web_fetch 抓取官方文档（而非仅凭记忆）",
+        "开头有一句话总结（> 引用块）"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "帮我写一篇知识库笔记：Claude Code 官方文档对上下文窗口和上下文管理是怎么说的？放到 Agent/ClaudeCode 目录，信息来源写清楚。",
+      "expected_output": "一篇基于官方文档的中文知识库笔记，引用官方原话，文末注明来源与获取日期。",
+      "files": [],
+      "expectations": [
+        "输出文件创建在任务给定的输出目录",
+        "文中包含至少一处官方原文引用（> 引用块）",
+        "文末有参考来源小节，注明获取日期/方式",
+        "执行过程中使用了 web_fetch 抓取官方文档（而非仅凭记忆）",
+        "引用内容与官方文档一致（未编造原话）"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "整理成一篇 blog：Claude Code 官方推荐用哪些方式扩展能力（MCP、hooks、skills、插件）？分别什么时候用？放在 Agent/ClaudeCode 下，附信息来源。",
+      "expected_output": "一篇基于官方文档的中文 blog，用表格对比各扩展方式的使用场景，文末附参考来源。",
+      "files": [],
+      "expectations": [
+        "输出文件创建在任务给定的输出目录",
+        "用表格对比 MCP/hooks/skills/插件 等扩展方式",
+        "文末有参考来源小节，列出官方 URL",
+        "执行过程中使用了 web_fetch 抓取官方文档（而非仅凭记忆）",
+        "内容基于官方文档而非社区博客"
+      ]
+    }
+  ]
+}
